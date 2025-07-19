@@ -1,0 +1,22 @@
+import("//build/templates/build_template.gni")
+
+build_rust("phf_macros") {
+  epoch = "0.12"
+  crate_type = "proc-macro"
+  sources = [ "//external/phf_macros/v0.12.0/src/lib.rs" ]
+  inputs = []
+  edition = "2021"
+  deps = [
+    "//external/phf_generator/v0.11.3:phf_generator",
+    "//external/phf_shared/v0.11.3:phf_shared",
+    "//external/proc-macro2/v1.0.89:proc_macro2",
+    "//external/quote/v1.0.37:quote",
+    "//external/syn/v2.0.87:syn",
+  ]
+
+  rustflags = [
+    "--cap-lints=allow",  # Suppress all warnings in crates.io crates
+    "--extern",
+    "proc_macro",
+  ]
+}

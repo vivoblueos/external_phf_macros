@@ -1,0 +1,10 @@
+Name: phf_macros
+URL: https://crates.io/crates/phf_macros
+Version: 0.12.0
+Revision: e309f286acbfc238d7fec17c7c5f4328557566f8
+License: MIT
+License File: //external/bluekernel_crates_io/vendor/phf_macros-0.12.0/LICENSE
+Shipped: yes
+Security Critical: yes
+
+Description: Macros to generate types in the phf crate
